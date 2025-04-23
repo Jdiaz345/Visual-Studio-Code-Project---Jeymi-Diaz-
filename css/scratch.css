@@ -1,0 +1,113 @@
+body {
+    font-family: 'Comic Neue', cursive;
+    color: #1a1a1a;
+    background: linear-gradient(45deg, #ff6b6b, #ffd166, #06d6a0, #118ab2, #ef476f); 
+    background-size: 400%;
+    animation: colorShift 15s ease infinite;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+@keyframes colorShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.header {
+    background-color: rgba(255, 111, 145, 0.9); 
+    color: #ffffff;
+    padding: 20px;
+    border-bottom: 4px solid #ffd166; 
+}
+
+.header h1 {
+    font-family: 'Comic Neue', cursive;
+    font-weight: 700;
+    color: #06d6a0;
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.header nav ul li a:hover {
+    color: #ffd166; 
+}
+
+.main-content {
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.main-content h2 {
+    font-family: 'Comic Neue', cursive;
+    font-weight: 700;
+    color: #ef476f; 
+    font-size: 2em;
+}
+
+.main-content p, .main-content ol, .main-content ul {
+    text-align: center;
+    list-style-position: inside;
+    color: #1a1a1a;
+    font-size: 1.1em;
+}
+
+.main-content img {
+    max-width: 25%; 
+    height: auto;
+    border-radius: 15px;
+    margin: 10px;
+    display: inline-block;
+    border: 3px solid #ffd166; 
+    transition: transform 0.3s ease;
+}
+
+.main-content img:hover {
+    transform: scale(1.15);
+}
+
+.main-content iframe {
+    margin: 20px auto;
+    display: block;
+    border-radius: 15px;
+    border: 3px solid #06d6a0; 
+}
+
+.footer {
+    background-color: rgba(255, 111, 145, 0.9); 
+    color: #ffffff;
+    padding: 15px;
+    border-top: 4px solid #ffd166; 
+}
+
+.footer a {
+    color: #06d6a0; 
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.footer a:hover {
+    color: #ffd166; 
+}

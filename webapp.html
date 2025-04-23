@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Jeymi's Joke Game</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #770cf0;
+        }
+        .container {
+            text-align: center;
+            background-color: rgb(252, 15, 197);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+        }
+        h1 {
+            color: whitesmoke;
+        }
+        #joke {
+            font-size: 1.2em;
+            margin: 20px 0;
+            color: white;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #punchline {
+            display: none;
+            font-weight: bold;
+            color:black;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Joke Game</h1>
+        <div id="joke"></div>
+        <div id="punchline"></div>
+        <button onclick="showPunchline()">Show Punchline</button>
+        <button onclick="newJoke()">New Joke</button>
+    </div>
+
+    <script>
+        const jokes = [
+            {
+                setup: "Why did the scarecrow become a motivational speaker?",
+                punchline: "Because he was outstanding in his field!"
+            },
+            {
+                setup: "Why don't skeletons fight each other?",
+                punchline: "They don't have the guts!"
+            },
+            {
+                setup: "What do you call a bear with no socks on?",
+                punchline: "Barefoot!"
+            }
+
+            
+        ];
+
+        function getRandomJoke() {
+            return jokes[Math.floor(Math.random() * jokes.length)];
+        }
+
+        function newJoke() {
+            const joke = getRandomJoke();
+            document.getElementById('joke').textContent = joke.setup;
+            document.getElementById('punchline').textContent = joke.punchline;
+            document.getElementById('punchline').style.display = 'none';
+        }
+
+        function showPunchline() {
+            document.getElementById('punchline').style.display = 'block';
+        }
+
+        // Load initial joke
+        newJoke();
+    </script>
+</body>
+</html>
